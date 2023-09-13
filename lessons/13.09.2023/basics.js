@@ -62,5 +62,50 @@ const numbrid = [0, 3, 13, 12, 8, 7]
 console.log(findAnIndex(numbrid, 13))
 //console.log(addArrowShort(3, 5))
 console.log(addNested3(3)(5))
-console.log(nameString("Sten"))
+console.log(nameString("Kaspar"))
 console.log(filteredArray)
+
+/* const newArray = numberArray.map(element, index, array => {
+    console.log({
+        element: element,
+        newElement: element + 5,
+        "index": index,
+        array 
+    }
+
+    return element + 5
+} */
+
+const filteredArray1 = numberArray.filter(num => num < 4)
+
+console.log(1 < 4)
+
+console.log({numberArray, filteredArray1})
+
+
+const names = ["Mari", "Jaan", "Mihkel", "Juku"]
+
+const data = names.map(name => {
+    return {
+        name: name,
+        age: name.length + 20,
+        email: name.toLowerCase() + "@company.com",
+        address:  name + " Street 55",
+        username: name.split("").reverse().join(""),
+    }
+})
+console.log(data)
+
+console.log(data[0])
+
+const newJuku = {
+    ...data[0],
+    height: 175
+}
+
+const evenNewerJuku = {
+    ...newJuku,
+    age: 99
+}
+
+console.log({ newJuku, evenNewerJuku })
